@@ -1,13 +1,13 @@
 Summary:	A front end for testing other programs
 Summary(pl):	Platforma do testowania innych programów
 Name:		dejagnu
-Version:	1.4.3
-Release:	0.9
+Version:	1.4.4
+Release:	0.1
 Epoch:		1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
-# Source0-md5:	f0cc24ebe8d1ba94f731d9cd04aa05f3
+# Source0-md5:	053f18fd5d00873de365413cab17a666
 Patch0:		%{name}-am_fixes.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,21 +32,22 @@ testowania.
 
 %prep
 %setup -q
-%patch0 -p1
+#%%patch0 -p1
 
 %build
 rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-cd example/calc
-rm -f missing
-%{__aclocal}
-%{__autoconf}
-%{__automake}
-cd ../..
+#cd example/calc
+#rm -f missing
+#%%{__aclocal}
+#%%{__autoconf}
+#%%{__automake}
+#%cd ../..
 %configure
 %{__make}
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -61,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 # %config site.exp
-%doc NEWS README AUTHORS ChangeLog doc/overview
+%doc NEWS README AUTHORS ChangeLog doc/overview.* doc/README.Writers doc/ref* doc/user* doc/dejagnu* doc/html
 %attr(755,root,root) %{_bindir}/runtest
 %dir %{_datadir}/dejagnu
 %attr(755,root,root) %{_datadir}/dejagnu/runtest.exp
@@ -73,3 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dejagnu/libgloss.exp
 %{_datadir}/dejagnu/config
 %{_mandir}/man1/*
+%{_includedir}/dejagnu.h
