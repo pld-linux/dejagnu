@@ -8,8 +8,8 @@ License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am_fixes.patch
-BuildRewuires:	autoconf
-BuildRewuires:	automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 Requires:	tcl >= 8.0
 Requires:	expect >= 5.21
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
