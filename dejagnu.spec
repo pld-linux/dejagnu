@@ -4,7 +4,7 @@ Name:		dejagnu
 Version:	1.4.0
 Release:	1
 License:	GPL
-Source0:	ftp://ftp.gnu.org/gnu/dejagnu/snapshots/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
