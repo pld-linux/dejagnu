@@ -1,3 +1,5 @@
+# TODO
+# - any ideas why this package was never sent to Ac builders?
 Summary:	A front end for testing other programs
 Summary(pl):	Platforma do testowania innych programów
 Name:		dejagnu
@@ -39,19 +41,12 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-#cd example/calc
-#rm -f missing
-#%%{__aclocal}
-#%%{__autoconf}
-#%%{__automake}
-#%cd ../..
 %configure
 %{__make}
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-#install -d$RPM_BUILD_ROOT{%{_datadir}/dejagnu,%{_prefix}/doc/dejagnu-%{version}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
