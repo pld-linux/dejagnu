@@ -1,13 +1,13 @@
 Summary:	A front end for testing other programs
 Summary(pl):	Platforma do testowania innych programów
 Name:		dejagnu
-Version:	1.4.0
-Release:	1
+Version:	1.4.3
+Release:	0.9
 Epoch:		1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
-# Source0-md5:	01128318451bddffde61b7e3e01ffe71
+# Source0-md5:	f0cc24ebe8d1ba94f731d9cd04aa05f3
 Patch0:		%{name}-am_fixes.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,8 +31,8 @@ sprzêtowych oraz zapewnia jednolity format raportów z przebiegu
 testowania.
 
 %prep
-%setup -q -n dejagnu-1.4
-%patch0 -p1
+%setup -q
+#%patch0 -p1
 
 %build
 rm -f missing
@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS README AUTHORS ChangeLog doc/overview
 %attr(755,root,root) %{_bindir}/runtest
 %dir %{_datadir}/dejagnu
-%attr(755,root,root) %{_datadir}/dejagnu/config.guess
+#%attr(755,root,root) %{_datadir}/dejagnu/config.guess
 %attr(755,root,root) %{_datadir}/dejagnu/runtest.exp
 %attr(755,root,root) %{_datadir}/dejagnu/libexec/config.guess
 %{_datadir}/dejagnu/[^crl]*
@@ -73,3 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dejagnu/rsh.exp
 %{_datadir}/dejagnu/libgloss.exp
 %{_datadir}/dejagnu/config
+%{_mandir}/man1/*
