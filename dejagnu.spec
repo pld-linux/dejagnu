@@ -3,6 +3,7 @@ Summary(pl):	Platforma do testowania innych programów
 Name:		dejagnu
 Version:	1.4.0
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
