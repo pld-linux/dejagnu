@@ -1,0 +1,3 @@
+- regenerate ac/am files and use %configure macro (added am_fixes aptch),
+- INSTALL removed from %doc and added gzipping %doc files,
+- siplify %install and few cosmetics.
