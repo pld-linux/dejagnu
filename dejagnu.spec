@@ -18,10 +18,11 @@ output format of all tests (making it easier to integrate the testing
 into software development).
 
 %description -l pl
-DejaGnu jest platform± bazuj±c± na Expect'ie i Tcl s³u¿±ca do testowania
-innych programów. DejaGnu umo¿liwia ³atwe tworzenie testów do niemal 
-dowolnego programu, uruchamiania ich na ró¿nych platformach sprzêtowych oraz
-zapewnia jednolity format raportów z przebiegu testowania. 
+DejaGnu jest platform± bazuj±c± na Expect'ie i Tcl s³u¿±ca do
+testowania innych programów. DejaGnu umo¿liwia ³atwe tworzenie testów
+do niemal dowolnego programu, uruchamiania ich na ró¿nych platformach
+sprzêtowych oraz zapewnia jednolity format raportów z przebiegu
+testowania.
 
 %prep
 %setup -q -n dejagnu-1.4
@@ -53,8 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dejagnu/libgloss.exp
 %{_datadir}/dejagnu/config
 
-
 # %config site.exp
 
-%doc COPYING NEWS README AUTHORS INSTALL ChangeLog doc/overview
- 
+%doc NEWS README AUTHORS INSTALL ChangeLog doc/overview
