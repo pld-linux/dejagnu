@@ -7,6 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
+# Source0-md5:	01128318451bddffde61b7e3e01ffe71
 Patch0:		%{name}-am_fixes.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
