@@ -54,15 +54,13 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf NEWS README AUTHORS ChangeLog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 # %config site.exp
-%doc *.gz doc/overview
+%doc NEWS README AUTHORS ChangeLog doc/overview
 %attr(755,root,root) %{_bindir}/runtest
 %dir %{_datadir}/dejagnu
 %attr(755,root,root) %{_datadir}/dejagnu/config.guess
