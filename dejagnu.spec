@@ -2,13 +2,14 @@ Summary:	A front end for testing other programs
 Summary(pl):	Platforma do testowania innych programów
 Name:		dejagnu
 Version:	1.4.4
-Release:	0.1
+Release:	0.2
 Epoch:		1
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
 # Source0-md5:	053f18fd5d00873de365413cab17a666
 Patch0:		%{name}-am_fixes.patch
+Patch1:		%{name}-ac_fixes.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 Requires:	tcl >= 8.0
@@ -33,6 +34,7 @@ testowania.
 %prep
 %setup -q
 #%%patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
