@@ -32,7 +32,7 @@ testowania.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
 rm -f missing
@@ -64,7 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS README AUTHORS ChangeLog doc/overview
 %attr(755,root,root) %{_bindir}/runtest
 %dir %{_datadir}/dejagnu
-#%attr(755,root,root) %{_datadir}/dejagnu/config.guess
 %attr(755,root,root) %{_datadir}/dejagnu/runtest.exp
 %attr(755,root,root) %{_datadir}/dejagnu/libexec/config.guess
 %{_datadir}/dejagnu/[^crl]*
