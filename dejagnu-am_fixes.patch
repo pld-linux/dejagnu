@@ -1,8 +1,10 @@
---- dejagnu-1.4/Makefile.am~	Sun May  5 13:57:57 2002
-+++ dejagnu-1.4/Makefile.am	Sun May  5 13:57:57 2002
-@@ -61,39 +61,12 @@
+--- dejagnu-1.4.3/Makefile.am.orig	2002-09-04 20:36:08.000000000 +0000
++++ dejagnu-1.4.3/Makefile.am	2003-06-22 15:07:40.897984904 +0000
+@@ -151,46 +151,17 @@
+ 
  # Below, host-independent data files that need to get installed.
  # We do it this way so we can use globbing.
++#
  
 -lib_dest = $(DESTDIR)$(pkgdatadir)
 -lib_files = $(srcdir)/*.c $(srcdir)/lib/*.exp
@@ -16,18 +18,19 @@
  
 -config_dest = $(DESTDIR)$(pkgdatadir)/config
 -config_files = $(srcdir)/config/README $(srcdir)/config/*.exp
--
++configdir = $(pkgdatadir)/config
++config_DATA = $(srcdir)/config/README $(srcdir)/config/*.exp
+ 
 -install-data-local:
--	$(mkinstalldirs) $(lib_dest)
+-	$(mkinstalldirs) $(lib_dest) $(includedir)
 -	for f in $(lib_files); do \
 -	  test ! -f "$$f" || $(INSTALL_DATA) $$f $(lib_dest); \
 -	done
--	#
 -	$(mkinstalldirs) $(baseboards_dest)
 -	for f in $(baseboards_files); do \
 -	  test ! -f "$$f" || $(INSTALL_DATA) $$f $(baseboards_dest); \
 -	done
--	#
+-	$(INSTALL_DATA) $(srcdir)/dejagnu.h $(includedir); \
 -	$(mkinstalldirs) $(config_dest)
 -	for f in $(config_files); do \
 -	  test ! -f "$$f" || $(INSTALL_DATA) $$f $(config_dest); \
@@ -43,6 +46,11 @@
 -	for f in $(baseboards_files); do \
 -	  test ! -f "$$f" || rm -f $(baseboards_dest)/`basename "$$f"`; \
 -	done
-+configdir = $(pkgdatadir)/config
-+config_DATA = $(srcdir)/config/README $(srcdir)/config/*.exp
+-
+-	for f in $(baseboards_files); do \
+-	  test ! -f "$$f" || rm -f $(baseboards_dest)/`basename "$$f"`; \
+-	done
+-	rm -f $(includedir)/dejagnu.h;
  
+ site.exp: Makefile
+ 	@echo 'Making a new site.exp file...'
