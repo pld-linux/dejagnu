@@ -35,12 +35,12 @@ testowania.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 cd example/calc
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 cd ../..
