@@ -1,10 +1,8 @@
-# TODO
-# - any ideas why this package was never sent to Ac builders?
 Summary:	A front end for testing other programs
 Summary(pl):	Platforma do testowania innych programów
 Name:		dejagnu
 Version:	1.4.4
-Release:	0.2
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Development/Tools
