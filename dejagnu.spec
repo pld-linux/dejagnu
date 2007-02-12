@@ -1,5 +1,5 @@
 Summary:	A front end for testing other programs
-Summary(pl.UTF-8):   Platforma do testowania innych programów
+Summary(pl.UTF-8):	Platforma do testowania innych programów
 Name:		dejagnu
 Version:	1.4.4
 Release:	1
