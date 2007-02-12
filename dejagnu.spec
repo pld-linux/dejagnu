@@ -1,5 +1,5 @@
 Summary:	A front end for testing other programs
-Summary(pl):	Platforma do testowania innych programów
+Summary(pl.UTF-8):   Platforma do testowania innych programÃ³w
 Name:		dejagnu
 Version:	1.4.4
 Release:	1
@@ -23,11 +23,11 @@ host or target where a program must be tested; and to standardize the
 output format of all tests (making it easier to integrate the testing
 into software development).
 
-%description -l pl
-DejaGnu jest platform± bazuj±c± na Expect'ie i Tcl s³u¿±ca do
-testowania innych programów. DejaGnu umo¿liwia ³atwe tworzenie testów
-do niemal dowolnego programu, uruchamiania ich na ró¿nych platformach
-sprzêtowych oraz zapewnia jednolity format raportów z przebiegu
+%description -l pl.UTF-8
+DejaGnu jest platformÄ… bazujÄ…cÄ… na Expect'ie i Tcl sÅ‚uÅ¼Ä…ca do
+testowania innych programÃ³w. DejaGnu umoÅ¼liwia Å‚atwe tworzenie testÃ³w
+do niemal dowolnego programu, uruchamiania ich na rÃ³Å¼nych platformach
+sprzÄ™towych oraz zapewnia jednolity format raportÃ³w z przebiegu
 testowania.
 
 %prep
