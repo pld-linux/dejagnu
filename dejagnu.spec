@@ -59,6 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/runtest
 %dir %{_datadir}/dejagnu
 %attr(755,root,root) %{_datadir}/dejagnu/runtest.exp
+%dir %{_datadir}/dejagnu/libexec
 %attr(755,root,root) %{_datadir}/dejagnu/libexec/config.guess
 %{_datadir}/dejagnu/[^crl]*
 %{_datadir}/dejagnu/rlogin.exp
