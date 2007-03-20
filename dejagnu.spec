@@ -2,7 +2,7 @@ Summary:	A front end for testing other programs
 Summary(pl.UTF-8):	Platforma do testowania innych programów
 Name:		dejagnu
 Version:	1.4.4
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Development/Tools
@@ -13,6 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 Requires:	tcl >= 8.0
 Requires:	expect >= 5.21
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
