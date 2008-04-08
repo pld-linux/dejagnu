@@ -6,7 +6,7 @@ Release:	2
 Epoch:		1
 License:	GPL
 Group:		Development/Tools
-Source0:	ftp://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnu.org/gnu/dejagnu/%{name}-%{version}.tar.gz
 # Source0-md5:	053f18fd5d00873de365413cab17a666
 Patch0:		%{name}-ac_fixes.patch
 BuildRequires:	autoconf
